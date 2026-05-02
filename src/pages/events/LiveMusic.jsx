@@ -36,7 +36,7 @@ export default function LiveMusic() {
               <div className="w-6 h-px bg-signal-red" />
               <span className="font-inter text-signal-red text-xs tracking-[0.3em] uppercase">Phago Media</span>
             </div>
-            <h1 className="font-grotesk font-bold text-white text-3xl md:text-5xl leading-tight">Music & Sound Engineering</h1>
+            <h1 className="font-grotesk font-bold text-white text-3xl md:text-5xl leading-tight">Music and Sound Engineering</h1>
             <p className="font-inter text-white/70 mt-1 text-sm">Professional sound engineering for live environments.</p>
           </div>
         </div>
