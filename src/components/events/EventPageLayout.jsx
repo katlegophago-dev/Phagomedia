@@ -26,14 +26,7 @@ function PricingCard({ pkg }) {
         </ul>
       </div>
       <div className="p-5 pt-0">
-        
-          href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20book%20a%20package."
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`block w-full py-3 text-center font-grotesk font-semibold text-sm tracking-[0.1em] transition-all duration-300 ${
-            pkg.highlight ? 'bg-signal-red text-white hover:bg-red-700' : 'border border-navy text-navy hover:bg-navy hover:text-white'
-          }`}
-        >
+        <a href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20book%20a%20package." target="_blank" rel="noopener noreferrer" className={`block w-full py-3 text-center font-grotesk font-semibold text-sm tracking-[0.1em] transition-all duration-300 ${pkg.highlight ? 'bg-signal-red text-white hover:bg-red-700' : 'border border-navy text-navy hover:bg-navy hover:text-white'}`}>
           BOOK THIS PACKAGE
         </a>
       </div>
@@ -42,24 +35,19 @@ function PricingCard({ pkg }) {
 }
 
 export default function EventPageLayout({ title, subtitle, heroImage, packages, pricingTitle, eventType }) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const scrollToPortfolio = () => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
   const scrollToPricing = () => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <div className="min-h-screen bg-studio-white">
-      {/* Hero */}
+
       <div className="relative h-52 md:h-72 overflow-hidden">
         <img src={heroImage} alt={title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-navy/70" />
         <div className="absolute top-5 left-6">
-          <button
-            onClick={() => { window.location.href = '/'; }}
-            className="flex items-center gap-2 text-white/80 hover:text-white font-inter text-sm transition-colors bg-navy/40 px-3 py-1.5 hover:bg-navy/70"
-          >
+          <button onClick={() => { window.location.href = '/'; }} className="flex items-center gap-2 text-white/80 hover:text-white font-inter text-sm transition-colors bg-navy/40 px-3 py-1.5 hover:bg-navy/70">
             <ArrowLeft size={15} /> Home
           </button>
         </div>
@@ -75,32 +63,22 @@ export default function EventPageLayout({ title, subtitle, heroImage, packages, 
         </div>
       </div>
 
-      {/* Quick nav */}
       <div className="bg-navy border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex gap-0">
-          <button
-            onClick={scrollToPortfolio}
-            className="flex items-center gap-2 px-6 py-3 font-inter text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors border-r border-white/10"
-          >
-            <Images size={15} />
-            View Portfolio
+          <button onClick={scrollToPortfolio} className="flex items-center gap-2 px-6 py-3 font-inter text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors border-r border-white/10">
+            <Images size={15} /> View Portfolio
           </button>
-          <button
-            onClick={scrollToPricing}
-            className="flex items-center gap-2 px-6 py-3 font-inter text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
-          >
+          <button onClick={scrollToPricing} className="flex items-center gap-2 px-6 py-3 font-inter text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors">
             View Pricing
           </button>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
-        {/* Portfolio */}
         <div className="mb-16">
           <PortfolioManager eventType={eventType} />
         </div>
 
-        {/* Pricing */}
         <div id="pricing-section">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-8 h-px bg-signal-red" />
@@ -115,6 +93,7 @@ export default function EventPageLayout({ title, subtitle, heroImage, packages, 
           </p>
         </div>
       </div>
+
     </div>
   );
 }
