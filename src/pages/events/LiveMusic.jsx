@@ -21,18 +21,12 @@ export default function LiveMusic() {
 
   return (
     <div className="min-h-screen bg-studio-white">
+
       <div className="relative h-52 md:h-80 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1501386761578-eaa54b5c3bfc?w=1600&q=80"
-          alt="Live Music Events"
-          className="w-full h-full object-cover"
-        />
+        <img src="https://images.unsplash.com/photo-1501386761578-eaa54b5c3bfc?w=1600&q=80" alt="Live Music Events" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-navy/70" />
         <div className="absolute top-5 left-6">
-          <button
-            onClick={() => { window.location.href = '/'; }}
-            className="flex items-center gap-2 text-white/80 hover:text-white font-inter text-sm transition-colors bg-navy/40 px-3 py-1.5 hover:bg-navy/70"
-          >
+          <button onClick={() => { window.location.href = '/'; }} className="flex items-center gap-2 text-white/80 hover:text-white font-inter text-sm transition-colors bg-navy/40 px-3 py-1.5 hover:bg-navy/70">
             <ArrowLeft size={15} /> Home
           </button>
         </div>
@@ -49,6 +43,7 @@ export default function LiveMusic() {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-16">
+
         <div className="mb-14">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-8 h-px bg-signal-red" />
@@ -130,16 +125,12 @@ export default function LiveMusic() {
           <p className="font-inter text-white/60 text-sm leading-relaxed mb-8 max-w-xl">
             Interested in hiring our sound equipment or booking our engineers? Fill in our inquiry form and we'll get back to you shortly.
           </p>
-          
-            href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20enquire%20about%20sound%20engineering%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-signal-red text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:bg-red-700 transition-colors duration-300"
-          >
+          <a href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20enquire%20about%20sound%20engineering%20services." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-signal-red text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:bg-red-700 transition-colors duration-300">
             <ExternalLink size={16} />
             SUBMIT INQUIRY FORM
           </a>
         </div>
+
       </div>
     </div>
   );
