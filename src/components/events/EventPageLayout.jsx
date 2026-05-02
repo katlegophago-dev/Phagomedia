@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { ArrowLeft, Check, Images } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import PortfolioManager from './PortfolioManager';
 
 function PricingCard({ pkg }) {
@@ -36,8 +35,6 @@ function PricingCard({ pkg }) {
 }
 
 export default function EventPageLayout({ title, subtitle, heroImage, packages, pricingTitle, eventType }) {
-  const navigate = useNavigate();
-
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const scrollToPortfolio = () => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
@@ -50,9 +47,9 @@ export default function EventPageLayout({ title, subtitle, heroImage, packages, 
         <img src={heroImage} alt={title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-navy/70" />
         <div className="absolute top-5 left-6">
-          <button onClick={() => navigate('/')} className="flex items-center gap-2 text-white/80 hover:text-white font-inter text-sm transition-colors bg-navy/40 px-3 py-1.5 hover:bg-navy/70">
+          <a href="/" className="flex items-center gap-2 text-white/80 hover:text-white font-inter text-sm transition-colors bg-navy/40 px-3 py-1.5 hover:bg-navy/70">
             <ArrowLeft size={15} /> Home
-          </button>
+          </a>
         </div>
         <div className="absolute inset-0 flex items-end p-6 md:p-12">
           <div>
