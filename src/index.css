@@ -1,1 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 43% 19%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 43% 19%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 43% 19%;
+    --primary: 220 43% 19%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 20% 97%;
+    --secondary-foreground: 220 43% 19%;
+    --muted: 240 20% 97%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 0 100% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 220 43% 19%;
+    --radius: 0.375rem;
+
+    /* Brand tokens */
+    --navy: #1B2A4A;
+    --red: #CC0000;
+    --studio-white: #FFFFFF;
+    --tech-grey: #F4F4F9;
+  }
+
+  .dark {
+    --background: 220 43% 10%;
+    --foreground: 0 0% 98%;
+    --card: 220 43% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 43% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 220 43% 19%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 30% 18%;
+    --muted-foreground: 220 15% 65%;
+    --accent: 0 100% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 30% 22%;
+    --input: 220 30% 22%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  .text-navy {
+    color: #1B2A4A;
+  }
+  .text-signal-red {
+    color: #CC0000;
+  }
+  .bg-navy {
+    background-color: #1B2A4A;
+  }
+  .bg-signal-red {
+    background-color: #CC0000;
+  }
+  .bg-tech-grey {
+    background-color: #F4F4F9;
+  }
+  .border-signal-red {
+    border-color: #CC0000;
+  }
+  .border-navy {
+    border-color: #1B2A4A;
+  }
+}
+
+/* Shutter reveal animation */
+@keyframes shutterOpen {
+  0% { clip-path: inset(50% 0); }
+  100% { clip-path: inset(0% 0); }
+}
+
+.shutter-reveal {
+  animation: shutterOpen 1.2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+/* WhatsApp pulse */
+@keyframes signalPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(204, 0, 0, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(204, 0, 0, 0); }
+}
+
+.whatsapp-pulse {
+  animation: signalPulse 2.5s ease-in-out infinite;
+}
+
+/* Service blade hover */
+.service-blade {
+  transition: flex 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F4F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B2A4A;
+  border-radius: 2px;
+}
+
+/* Ticker animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Focus in animation */
+@keyframes focusIn {
+  0% { filter: blur(6px) grayscale(80%); opacity: 0.6; transform: scale(1.03); }
+  100% { filter: blur(0) grayscale(0%); opacity: 1; transform: scale(1); }
+}
+
+.focus-in {
+  animation: focusIn 0.8s ease-out forwards;
+}
+
+/* Viewfinder crop marks */
+.viewfinder-marks::before,
+.viewfinder-marks::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.viewfinder-marks::before {
+  top: 16px;
+  left: 16px;
+  border-top: 1px solid #1B2A4A;
+  border-left: 1px solid #1B2A4A;
+}
+
+.viewfinder-marks::after {
+  bottom: 16px;
+  right: 16px;
+  border-bottom: 1px solid #1B2A4A;
+  border-right: 1px solid #1B2A4A;
+}
