@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Weddings from './pages/events/Weddings';
 import Matric from './pages/events/Matric';
 import Training from './pages/events/Training';
-import LiveMusic from './pages/events/LiveMusic';
+import LiveMusic from './pages/events/LiveMusicPage';
 
 function App() {
   return (
