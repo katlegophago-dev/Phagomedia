@@ -22,7 +22,7 @@ export default function LiveMusic() {
   return (
     <div className="min-h-screen bg-studio-white">
       <div className="relative h-52 md:h-80 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1501386761578-eaa54b5c3bfc?w=1600&q=80" alt="Live Music Events" className="w-full h-full object-cover" />
+        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1600&q=80" alt="Live Music Events" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-navy/70" />
         <div className="absolute top-5 left-6 z-10">
           <a href="/" className="flex items-center gap-2 text-white/80 hover:text-white font-inter text-sm transition-colors bg-navy/40 px-3 py-1.5 hover:bg-navy/70">
@@ -104,12 +104,12 @@ export default function LiveMusic() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {[
-              'https://images.unsplash.com/photo-1501386761578-eaa54b5c3bfc?w=800&q=80',
+              'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80',
               'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80',
               'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80',
               'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80',
               'https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=800&q=80',
-              'https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=800&q=80',
+              'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=800&q=80',
             ].map((url, i) => (
               <div key={i} className="aspect-[4/3] overflow-hidden">
                 <img src={url} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
