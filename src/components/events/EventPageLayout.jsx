@@ -46,7 +46,7 @@ export default function EventPageLayout({ title, subtitle, heroImage, packages, 
       <div className="relative h-52 md:h-72 overflow-hidden">
         <img src={heroImage} alt={title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-navy/70" />
-        <div className="absolute top-5 left-6">
+        <div className="absolute top-5 left-6 z-10">
           <a href="/" className="flex items-center gap-2 text-white/80 hover:text-white font-inter text-sm transition-colors bg-navy/40 px-3 py-1.5 hover:bg-navy/70">
             <ArrowLeft size={15} /> Home
           </a>
