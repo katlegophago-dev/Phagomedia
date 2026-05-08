@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { X, Camera, Film, Music, Check, ExternalLink, Images, Lock, Upload, Plus, Play } from 'lucide-react';
+import { X, Camera, Film, Music, Check, ExternalLink, Images, Lock, Plus, Play } from 'lucide-react';
 
 const ADMIN_PASSCODE = '2007';
 
@@ -53,7 +53,7 @@ function PasscodeModal({ onSuccess, onClose }) {
 
 function ServicePanel({ children, maxW = 'max-w-2xl' }) {
   return (
-    <div className={`w-full ${maxW} bg-studio-white h-full overflow-y-auto shadow-2xl`} onClick={e => e.stopPropagation()}>
+    <div className={`w-full ${maxW} bg-white h-full overflow-y-auto shadow-2xl`} onClick={e => e.stopPropagation()}>
       {children}
     </div>
   );
@@ -80,7 +80,7 @@ function GalleryLink({ href }) {
   );
 }
 
-function PinnedPhotos({ photos, onAdd, onRemove, adminMode, uploading }) {
+function PinnedPhotos({ photos, onAdd, onRemove, adminMode }) {
   if (photos.length === 0 && !adminMode) return null;
   return (
     <div className="mb-6">
@@ -133,7 +133,7 @@ function PhotographyPanel({ onClose }) {
             : <button onClick={() => setShowPasscode(true)} className="flex items-center gap-1.5 font-inter text-xs px-3 py-1.5 border border-navy/20 text-navy/50 hover:text-navy hover:border-navy transition-colors"><Lock size={11} /> Manage Photos</button>
           }
         </div>
-        <PinnedPhotos photos={photos} onAdd={handleUpload} onRemove={url => setPhotos(p => p.filter(u => u !== url))} adminMode={adminMode} uploading={false} />
+        <PinnedPhotos photos={photos} onAdd={handleUpload} onRemove={url => setPhotos(p => p.filter(u => u !== url))} adminMode={adminMode} />
         <p className="font-inter text-navy/80 leading-relaxed mb-6 text-sm">
           Our team includes five talented photographers who handle everything from weddings, matric dance farewells, conferences and events. Each photographer is well trained with world experience, supported by our incredible operations team. All editing is done in-house ensuring every image is polished to perfection.
         </p>
@@ -224,7 +224,7 @@ function VideographyPanel({ onClose }) {
           ) : adminMode ? (
             <label className="flex flex-col items-center justify-center border-2 border-dashed border-signal-red/30 p-8 cursor-pointer hover:bg-signal-red/5 transition-colors mx-auto" style={{ maxWidth: '240px', aspectRatio: '9/16' }}>
               <Play size={28} className="text-signal-red/50 mb-2" />
-              <span className="font-inter text-xs text-navy/50 text-center">Upload reel video<br />(portrait / 9:16)</span>
+              <span className="font-inter text-xs text-navy/50 text-center">Upload reel video</span>
               <input type="file" accept="video/*" onChange={handleVideoUpload} className="hidden" />
             </label>
           ) : (
@@ -234,7 +234,7 @@ function VideographyPanel({ onClose }) {
             </div>
           )}
         </div>
-        <PinnedPhotos photos={photos} onAdd={handlePhotoUpload} onRemove={url => setPhotos(p => p.filter(u => u !== url))} adminMode={adminMode} uploading={false} />
+        <PinnedPhotos photos={photos} onAdd={handlePhotoUpload} onRemove={url => setPhotos(p => p.filter(u => u !== url))} adminMode={adminMode} />
         <p className="font-inter text-navy/80 leading-relaxed mb-6 text-sm">
           Our team includes five talented cinematographers equipped with cameras, drones, and extensive experience in YouTube series and social media productions. From weddings to live events — every frame is crafted with purpose. All editing is completed in-house before delivery.
         </p>
@@ -280,7 +280,7 @@ function VideographyPanel({ onClose }) {
 function SoundPanel({ onClose }) {
   return (
     <ServicePanel maxW="max-w-lg">
-      <PanelHeader image="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=800&q=80" title="Music & Sound" onClose={onClose} />
+      <PanelHeader image="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=800&q=80" title="Music and Sound" onClose={onClose} />
       <div className="p-7">
         <p className="font-inter text-navy/80 leading-relaxed mb-7 text-sm">
           Our three sound engineers handle high-demand live environments with professional-grade equipment from the world's leading audio brands. Whether it's a conference, live music event, or studio recording — we deliver pristine sound every time.
@@ -382,7 +382,7 @@ export default function ServiceBlades() {
       </div>
 
       {active && (
-        <div className="fixed inset-0 z-50 flex justify-end" onClick={close}>
+        <div className="fixed inset-0 z-50 flex justify-end bg-navy/40 backdrop-blur-sm" onClick={close}>
           {active === 'photography' && <PhotographyPanel onClose={close} />}
           {active === 'videography' && <VideographyPanel onClose={close} />}
           {active === 'sound' && <SoundPanel onClose={close} />}
