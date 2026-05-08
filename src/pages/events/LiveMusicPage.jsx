@@ -42,7 +42,9 @@ export default function LiveMusic() {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-16">
-        <div className="mb-14">
+
+        {/* Overview */}
+        <div className="mb-10">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-8 h-px bg-signal-red" />
             <span className="font-inter text-signal-red text-sm tracking-[0.3em] uppercase">Overview</span>
@@ -52,6 +54,19 @@ export default function LiveMusic() {
           </p>
         </div>
 
+        {/* CTA - moved up */}
+        <div className="bg-navy p-8 md:p-12 mb-16">
+          <h2 className="font-grotesk font-bold text-white text-2xl md:text-3xl mb-3">Ready to book?</h2>
+          <p className="font-inter text-white/60 text-sm leading-relaxed mb-8 max-w-xl">
+            Interested in hiring our sound equipment or booking our engineers? Fill in our inquiry form and we will get back to you shortly.
+          </p>
+          <a href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20enquire%20about%20sound%20engineering%20services." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-signal-red text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:bg-red-700 transition-colors duration-300">
+            <ExternalLink size={16} />
+            SUBMIT INQUIRY FORM
+          </a>
+        </div>
+
+        {/* Stats */}
         <div className="grid grid-cols-3 gap-4 mb-16">
           {stats.map(s => (
             <div key={s.label} className="border border-navy/10 p-6 text-center">
@@ -61,6 +76,7 @@ export default function LiveMusic() {
           ))}
         </div>
 
+        {/* Equipment */}
         <div className="mb-14">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-8 h-px bg-signal-red" />
@@ -83,6 +99,7 @@ export default function LiveMusic() {
           </div>
         </div>
 
+        {/* Brands */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-8 h-px bg-signal-red" />
@@ -97,6 +114,7 @@ export default function LiveMusic() {
           </div>
         </div>
 
+        {/* Gallery */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-8 h-px bg-signal-red" />
@@ -118,16 +136,6 @@ export default function LiveMusic() {
           </div>
         </div>
 
-        <div className="bg-navy p-8 md:p-12">
-          <h2 className="font-grotesk font-bold text-white text-2xl md:text-3xl mb-3">Ready to book?</h2>
-          <p className="font-inter text-white/60 text-sm leading-relaxed mb-8 max-w-xl">
-            Interested in hiring our sound equipment or booking our engineers? Fill in our inquiry form and we will get back to you shortly.
-          </p>
-          <a href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20enquire%20about%20sound%20engineering%20services." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-signal-red text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:bg-red-700 transition-colors duration-300">
-            <ExternalLink size={16} />
-            SUBMIT INQUIRY FORM
-          </a>
-        </div>
       </div>
     </div>
   );
