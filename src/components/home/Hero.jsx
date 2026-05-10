@@ -66,9 +66,9 @@ export default function Hero() {
             <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-signal-red text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:bg-red-700 transition-all duration-300 text-center">
               CHAT WITH US
             </a>
-            <button onClick={scrollToServices} className="px-8 py-4 border border-white/40 text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:border-white hover:bg-white/10 transition-all duration-300">
-              OUR SERVICES
-            </button>
+            <button onClick={() => window.open(waUrl, '_blank')} className="px-8 py-4 bg-signal-red text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:bg-red-700 transition-all duration-300 text-center">
+  CHAT WITH US
+</button>
           </div>
         </div>
       </div>
