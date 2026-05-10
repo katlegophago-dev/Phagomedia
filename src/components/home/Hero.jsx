@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const heroImages = [
-  'https://i.imgur.com/I1JkcY2.jpeg',
-  'https://i.imgur.com/PNMhXq5.jpeg',
-  'https://i.imgur.com/ajSvb22.jpeg',
-  'https://i.imgur.com/f28teEW.jpeg',
-  'https://i.imgur.com/wkxHUUB.jpeg',
-  'https://i.imgur.com/iANb9E4.jpeg',
-  'https://i.imgur.com/Lzd5uce.jpeg',
+  const heroImages = [
+  'https://i.imgur.com/sY18rVf_l.jpg',
+  'https://i.imgur.com/iANb9E4_l.jpg',
+  'https://i.imgur.com/PNMhXq5_l.jpg',
+  'https://i.imgur.com/I1JkcY2_l.jpg',
+  'https://i.imgur.com/Lzd5uce_l.jpg',
+  'https://i.imgur.com/FNRGKjS_l.jpg',
+
 ];
 
 export default function Hero() {
