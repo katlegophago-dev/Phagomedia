@@ -61,22 +61,14 @@ export default function Hero() {
           </h1>
           <p className="font-inter text-white/70 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
             Photography, Videography and Sound Engineering.
-            Five photographers, five cinematographers, three sound engineers —
-            all delivering world-class work for your most important moments.
+            Five photographers, five cinematographers, three sound engineers.
+            All delivering world-class work for your most important moments.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            
-              href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20discuss%20a%20booking."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-signal-red text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:bg-red-700 transition-all duration-300 text-center"
-            >
+            <a href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20discuss%20a%20booking." target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-signal-red text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:bg-red-700 transition-all duration-300 text-center">
               CHAT WITH US
             </a>
-            <button
-              onClick={scrollToServices}
-              className="px-8 py-4 border border-white/40 text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:border-white hover:bg-white/10 transition-all duration-300"
-            >
+            <button onClick={scrollToServices} className="px-8 py-4 border border-white/40 text-white font-grotesk font-semibold text-sm tracking-[0.15em] hover:border-white hover:bg-white/10 transition-all duration-300">
               OUR SERVICES
             </button>
           </div>
@@ -85,18 +77,11 @@ export default function Hero() {
 
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {heroImages.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrentImg(i)}
-            className={`transition-all duration-300 ${i === currentImg ? 'w-6 h-1 bg-signal-red' : 'w-1 h-1 bg-white/40 rounded-full'}`}
-          />
+          <button key={i} onClick={() => setCurrentImg(i)} className={`transition-all duration-300 ${i === currentImg ? 'w-6 h-1 bg-signal-red' : 'w-1 h-1 bg-white/40 rounded-full'}`} />
         ))}
       </div>
 
-      <button
-        onClick={scrollToServices}
-        className="absolute bottom-6 right-8 flex flex-col items-center gap-1 text-white/40 hover:text-white/80 transition-colors z-10"
-      >
+      <button onClick={scrollToServices} className="absolute bottom-6 right-8 flex flex-col items-center gap-1 text-white/40 hover:text-white/80 transition-colors z-10">
         <span className="font-inter text-xs tracking-widest rotate-90 mb-2">SCROLL</span>
         <ChevronDown size={16} className="animate-bounce" />
       </button>
