@@ -3,11 +3,9 @@ import { ChevronDown } from 'lucide-react';
 
 const heroImages = [
   'https://i.imgur.com/I1JkcY2.jpeg',
-  'https://i.imgur.com/sY18rVf.jpeg',
-  'https://i.imgur.com/iANb9E4.jpeg',
   'https://i.imgur.com/PNMhXq5.jpeg',
+  'https://i.imgur.com/iANb9E4.jpeg',
   'https://i.imgur.com/Lzd5uce.jpeg',
-  'https://i.imgur.com/FNRGKjS.jpeg',
 ];
 
 export default function Hero() {
