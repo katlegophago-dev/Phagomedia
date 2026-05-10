@@ -3,13 +3,12 @@ import { ChevronDown } from 'lucide-react';
 
 const heroImages = [
   const heroImages = [
-  'https://i.imgur.com/sY18rVf_l.jpg',
-  'https://i.imgur.com/iANb9E4_l.jpg',
-  'https://i.imgur.com/PNMhXq5_l.jpg',
-  'https://i.imgur.com/I1JkcY2_l.jpg',
-  'https://i.imgur.com/Lzd5uce_l.jpg',
-  'https://i.imgur.com/FNRGKjS_l.jpg',
-
+  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8597_mcv4wg",
+  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_5896_knv30p",
+  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/Katlego_968_wba9rc",
+  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8613_auzeq3",
+  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8588_h7e8bm",
+  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8572_zvrj8w",
 ];
 
 export default function Hero() {
