@@ -1,11 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const heroImages = [
-  'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600&q=80',
-  'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1600&q=80',
-  'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80',
-  'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1600&q=80',
+  'https://i.imgur.com/sY18rVf.jpeg',
+  'https://i.imgur.com/iANb9E4.jpeg',
+  'https://i.imgur.com/PNMhXq5.jpeg',
+  'https://i.imgur.com/I1JkcY2.jpeg',
+  'https://i.imgur.com/Lzd5uce.jpeg',
+  'https://i.imgur.com/FNRGKjS.jpeg',
 ];
 
 export default function Hero() {
@@ -33,35 +35,27 @@ export default function Hero() {
       id="hero"
       className={`relative h-screen min-h-[600px] overflow-hidden ${revealed ? 'shutter-reveal' : ''}`}
     >
-      {/* Background Images */}
       {heroImages.map((img, i) => (
         <div
           key={img}
           className="absolute inset-0 transition-opacity duration-1000"
           style={{ opacity: i === currentImg ? 1 : 0 }}
         >
-          <img
-            src={img}
-            alt=""
-            className="w-full h-full object-cover"
-          />
+          <img src={img} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy/70" />
         </div>
       ))}
 
-      {/* Viewfinder marks */}
       <div className="absolute top-24 left-8 w-8 h-8 border-t border-l border-white/30 pointer-events-none" />
       <div className="absolute top-24 right-8 w-8 h-8 border-t border-r border-white/30 pointer-events-none" />
       <div className="absolute bottom-20 left-8 w-8 h-8 border-b border-l border-white/30 pointer-events-none" />
       <div className="absolute bottom-20 right-8 w-8 h-8 border-b border-r border-white/30 pointer-events-none" />
 
-      {/* REC indicator */}
       <div className="absolute top-24 right-20 flex items-center gap-2 z-10">
         <span className="w-2 h-2 rounded-full bg-signal-red animate-pulse" />
         <span className="text-white/60 font-inter text-xs tracking-widest">REC</span>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center px-6 lg:px-20 max-w-7xl mx-auto">
         <div className="max-w-3xl">
           <h1 className="font-grotesk font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-8">
@@ -72,12 +66,12 @@ export default function Hero() {
             OF THE MOMENT.
           </h1>
           <p className="font-inter text-white/70 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-            Photography · Videography · Sound Engineering. 
-            Five photographers, five cinematographers, three sound engineers — 
+            Photography · Videography · Sound Engineering.
+            Five photographers, five cinematographers, three sound engineers —
             all delivering world-class work for your most important moments.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
+            
               href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20discuss%20a%20booking."
               target="_blank"
               rel="noopener noreferrer"
@@ -95,7 +89,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Image dots */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {heroImages.map((_, i) => (
           <button
@@ -108,7 +101,6 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Scroll cue */}
       <button
         onClick={scrollToServices}
         className="absolute bottom-6 right-8 flex flex-col items-center gap-1 text-white/40 hover:text-white/80 transition-colors z-10"
