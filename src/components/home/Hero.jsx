@@ -2,15 +2,17 @@ import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const heroImages = [
-  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1200/IMG_8597_mcv4wg',
-  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1200/Katlego_968_wba9rc',
-  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1200/IMG_8572_zvrj8w',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8597_mcv4wg',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_5896_knv30p',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/Katlego_968_wba9rc',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8613_auzeq3',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8588_h7e8bm',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8572_zvrj8w',
 ];
 
 export default function Hero() {
   const [currentImg, setCurrentImg] = useState(0);
   const [revealed, setRevealed] = useState(false);
-  const [loaded, setLoaded] = useState([true, false, false]);
 
   useEffect(() => {
     const timer = setTimeout(() => setRevealed(true), 100);
@@ -19,11 +21,7 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImg((prev) => {
-        const next = (prev + 1) % heroImages.length;
-        setLoaded(l => { const n = [...l]; n[next] = true; return n; });
-        return next;
-      });
+      setCurrentImg((prev) => (prev + 1) % heroImages.length);
     }, 4500);
     return () => clearInterval(interval);
   }, []);
@@ -38,15 +36,13 @@ export default function Hero() {
     <section id="hero" className={`relative h-screen min-h-[600px] overflow-hidden ${revealed ? 'shutter-reveal' : ''}`}>
       {heroImages.map((img, i) => (
         <div key={img} className="absolute inset-0 transition-opacity duration-1000" style={{ opacity: i === currentImg ? 1 : 0 }}>
-          {loaded[i] && (
-            <img
-              src={img}
-              alt=""
-              className="w-full h-full object-cover"
-              loading={i === 0 ? 'eager' : 'lazy'}
-              fetchpriority={i === 0 ? 'high' : 'auto'}
-            />
-          )}
+          <img
+            src={img}
+            alt=""
+            className="w-full h-full object-cover"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : 'low'}
+          />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%)' }} />
         </div>
       ))}
