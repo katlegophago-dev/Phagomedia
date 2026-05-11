@@ -356,7 +356,7 @@ export default function ServiceBlades() {
               onClick={() => setActive(svc.id)}
             >
               <img src={svc.image} alt={svc.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 scale-105 hover:scale-110" />
-              <div className="absolute inset-0 bg-navy/70 hover:bg-navy/50 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-black/80 hover:bg-black/60 transition-colors duration-500" />
               <div className="absolute top-4 left-4 w-6 h-6 border-t border-l border-white/30" />
               <div className="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-white/30" />
               <div className="relative z-10 h-full flex flex-col justify-end p-8">
