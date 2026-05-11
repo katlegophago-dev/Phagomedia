@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const heroImages = [
-  const heroImages = [
-  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8597_mcv4wg",
-  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_5896_knv30p",
-  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/Katlego_968_wba9rc",
-  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8613_auzeq3",
-  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8588_h7e8bm",
-  "https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1600/IMG_8572_zvrj8w",
+  'https://res.cloudinary.com/djpngdzyj/image/upload/v1778445757/IMG_8597_mcv4wg.webp',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto/IMG_5896_knv30p',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/v1778445768/Katlego_968_wba9rc.webp',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/v1778445766/IMG_8613_auzeq3.webp',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/v1778445749/IMG_8588_h7e8bm.webp',
+  'https://res.cloudinary.com/djpngdzyj/image/upload/v1778445746/IMG_8572_zvrj8w.webp',
 ];
 
 export default function Hero() {
