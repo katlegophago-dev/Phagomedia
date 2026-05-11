@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-
+ 
 const heroImages = [
   'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1200/IMG_8597_mcv4wg',
   'https://res.cloudinary.com/djpngdzyj/image/upload/f_auto,q_auto,w_1200/Katlego_968_wba9rc',
