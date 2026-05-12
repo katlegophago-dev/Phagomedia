@@ -6,7 +6,7 @@ const ADMIN_PASSCODE = '2007';
 const placeholderAlbums = {
   weddings: [
     {
-      id: 'w1', name: 'The Sebola&#39s', Date: 'june 2024',
+      id: 'w1', name: "The Sebola's", Date: 'june 2024',
       cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621046/compressed-2/IMG_8581_czcith.webp',
       images: [
         'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621052/compressed-2/IMG_8596_o1crkv.webp',
