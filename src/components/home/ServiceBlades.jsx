@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import { X, Camera, Film, Music, Check, ExternalLink, Images, Lock, Plus, Play } from 'lucide-react';
 
 const ADMIN_PASSCODE = '2007';
-
 const SHOWREEL_URL = 'https://res.cloudinary.com/djpngdzyj/video/upload/v1778617394/absolute_final_sebola_r6sueo.mp4';
 
 const weddingPackages = [
@@ -216,15 +215,7 @@ function VideographyPanel({ onClose }) {
           </div>
           <div className="relative mx-auto bg-black overflow-hidden" style={{ maxWidth: '240px', aspectRatio: '9/16' }}>
             {videoReady ? (
-              <video
-                ref={videoRef}
-                src={SHOWREEL_URL}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
+              <video ref={videoRef} src={SHOWREEL_URL} autoPlay loop playsInline className="w-full h-full object-cover" />
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center bg-navy/20">
                 <Play size={28} className="text-signal-red/50 mb-2 animate-pulse" />
@@ -309,7 +300,7 @@ function SoundPanel({ onClose }) {
         </div>
         <div className="flex flex-wrap gap-2 mb-7">
           {soundBrands.map(brand => (
-            <span key={brand} className="border border-navy/20 px-3 py-1 font-inter text-navy text-xs font-medium">{brand}</span>
+            <span key={brand} className="border border-navy/20 px=3 py-1 font-inter text-navy text-xs font-medium">{brand}</span>
           ))}
         </div>
         <div className="bg-tech-grey p-5">
