@@ -6,13 +6,19 @@ const ADMIN_PASSCODE = '2007';
 const placeholderAlbums = {
   weddings: [
     {
-      id: 'w1', name: 'Sarah & James', date: 'March 2024',
-      cover: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80',
+      id: 'w1', name: 'Phathu & Vida', date: 'March 2024',
+      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621046/compressed-2/IMG_8581_czcith.webp',
       images: [
-        'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80',
-        'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80',
-        'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80',
-        'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621052/compressed-2/IMG_8596_o1crkv.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621047/compressed-2/IMG_8592_euxjx8.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621052/compressed-2/IMG_8597_2_mggppc.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621040/compressed-2/IMG_8588_2_ogc51m.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621051/compressed-2/IMG_8593_akbfjk.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621050/compressed-2/IMG_8590_zxr96s.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621046/compressed-2/IMG_8581_czcith.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621039/compressed-2/IMG_8586_fpfauw.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621047/compressed-2/IMG_8587_iwmmqr.webp',
+        
       ],
     },
     {
