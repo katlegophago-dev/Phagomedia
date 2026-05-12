@@ -33,7 +33,7 @@ const placeholderAlbums = {
   matric: [
     {
       id: 'm1', name: 'Pretoria Boys High MD', date: 'October 2025',
-      cover: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80',
+      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621046/compressed-2/IMG_8581_czcith.webp',
       images: [
        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621052/compressed-2/IMG_8596_o1crkv.webp',
         'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621047/compressed-2/IMG_8592_euxjx8.webp',
