@@ -32,13 +32,18 @@ const placeholderAlbums = {
   ],
   matric: [
     {
-      id: 'm1', name: 'Northgate High 2024', date: 'September 2024',
+      id: 'm1', name: 'Pretoria Boys High MD', date: 'October 2025',
       cover: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80',
       images: [
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
-        'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80',
-        'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
-        'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80',
+       'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621052/compressed-2/IMG_8596_o1crkv.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621047/compressed-2/IMG_8592_euxjx8.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621052/compressed-2/IMG_8597_2_mggppc.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621040/compressed-2/IMG_8588_2_ogc51m.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621051/compressed-2/IMG_8593_akbfjk.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621050/compressed-2/IMG_8590_zxr96s.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621046/compressed-2/IMG_8581_czcith.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621039/compressed-2/IMG_8586_fpfauw.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621047/compressed-2/IMG_8587_iwmmqr.webp',
       ],
     },
   ],
