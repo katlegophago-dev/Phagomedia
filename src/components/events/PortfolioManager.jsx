@@ -22,7 +22,7 @@ const placeholderAlbums = {
       ],
     },
     {
-      id: 'w2', name: 'The Phatedis', date: 'June 2024',
+      id: 'w2', name: "The Phatedi's", date: 'June 2024',
       cover: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80',
       images: [
         'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80',
