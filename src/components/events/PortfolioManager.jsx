@@ -30,6 +30,17 @@ const placeholderAlbums = {
       ],
     },
   ],
+  {
+  id: 'w3',
+  name: 'John & Mary',
+  date: 'January 2025',
+  cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/YOUR_IMAGE',
+  images: [
+    'https://res.cloudinary.com/djpngdzyj/image/upload/URL1',
+    'https://res.cloudinary.com/djpngdzyj/image/upload/URL2',
+    'https://res.cloudinary.com/djpngdzyj/image/upload/URL3',
+  ],
+},
   matric: [
     {
       id: 'm1', name: 'Phathu & Vida', date: 'October 2025',
