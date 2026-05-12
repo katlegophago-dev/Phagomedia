@@ -11,7 +11,6 @@ export default function About() {
       <div className="absolute top-0 right-0 w-64 h-64 border border-tech-grey rounded-full translate-x-32 -translate-y-32 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left — Text */}
           <div>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-8 h-px bg-signal-red" />
@@ -40,7 +39,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right — Stats + Image */}
           <div className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat) => (
@@ -52,7 +50,7 @@ export default function About() {
             </div>
             <div className="relative overflow-hidden h-48">
               <img
-                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80"
+                src="https://res.cloudinary.com/djpngdzyj/image/upload/v1778618322/491746921_1123316783155985_756589949538010257_n_iffmwl.jpg"
                 alt="Phago Media team at work"
                 className="w-full h-full object-cover"
               />
