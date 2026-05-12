@@ -6,7 +6,7 @@ const ADMIN_PASSCODE = '2007';
 const placeholderAlbums = {
   weddings: [
     {
-      id: 'w1', name: 'Sebola',
+      id: 'w1', name: 'The Sebola&#39s', Date: 'june 2024',
       cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621046/compressed-2/IMG_8581_czcith.webp',
       images: [
         'https://res.cloudinary.com/djpngdzyj/image/upload/v1778621052/compressed-2/IMG_8596_o1crkv.webp',
@@ -22,7 +22,7 @@ const placeholderAlbums = {
       ],
     },
     {
-      id: 'w2', name: 'Thandi & Sipho', date: 'June 2024',
+      id: 'w2', name: 'The Phatedis', date: 'June 2024',
       cover: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80',
       images: [
         'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80',
