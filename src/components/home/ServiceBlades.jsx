@@ -1,7 +1,9 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { X, Camera, Film, Music, Check, ExternalLink, Images, Lock, Plus, Play } from 'lucide-react';
 
 const ADMIN_PASSCODE = '2007';
+
+const SHOWREEL_URL = 'https://res.cloudinary.com/djpngdzyj/video/upload/v1778617394/absolute_final_sebola_r6sueo.mp4';
 
 const weddingPackages = [
   { tier: 'Tier 1 · Essential', name: 'The Classic', price: 'R8,500', highlight: false, features: ['Minimum 2 Photographers', '6 Hours Coverage', '300–400 Edited Images', 'Online Gallery', 'Colour Grading'] },
@@ -178,23 +180,21 @@ function PhotographyPanel({ onClose }) {
 
 function VideographyPanel({ onClose }) {
   const [photos, setPhotos] = useState([]);
-  const [videoUrl, setVideoUrl] = useState(null);
   const [adminMode, setAdminMode] = useState(false);
   const [showPasscode, setShowPasscode] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setVideoReady(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handlePhotoUpload = (e) => {
     const file = e.target.files[0];
     if (!file || photos.length >= 3) return;
     const url = URL.createObjectURL(file);
     setPhotos(prev => [...prev, url]);
-  };
-
-  const handleVideoUpload = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const url = URL.createObjectURL(file);
-    setVideoUrl(url);
   };
 
   return (
@@ -214,25 +214,24 @@ function VideographyPanel({ onClose }) {
             <div className="w-4 h-px bg-signal-red" />
             <span className="font-inter text-signal-red text-xs tracking-[0.25em] uppercase">Showreel</span>
           </div>
-          {videoUrl ? (
-            <div className="relative mx-auto bg-black overflow-hidden" style={{ maxWidth: '240px', aspectRatio: '9/16' }}>
-              <video ref={videoRef} src={videoUrl} autoPlay loop muted playsInline className="w-full h-full object-cover" />
-              {adminMode && (
-                <button onClick={() => setVideoUrl(null)} className="absolute top-2 right-2 w-6 h-6 bg-signal-red flex items-center justify-center text-white"><X size={12} /></button>
-              )}
-            </div>
-          ) : adminMode ? (
-            <label className="flex flex-col items-center justify-center border-2 border-dashed border-signal-red/30 p-8 cursor-pointer hover:bg-signal-red/5 transition-colors mx-auto" style={{ maxWidth: '240px', aspectRatio: '9/16' }}>
-              <Play size={28} className="text-signal-red/50 mb-2" />
-              <span className="font-inter text-xs text-navy/50 text-center">Upload reel video</span>
-              <input type="file" accept="video/*" onChange={handleVideoUpload} className="hidden" />
-            </label>
-          ) : (
-            <div className="flex flex-col items-center justify-center border border-dashed border-navy/10 p-8 text-center mx-auto" style={{ maxWidth: '240px', aspectRatio: '9/16' }}>
-              <Play size={28} className="text-navy/20 mb-2" />
-              <p className="font-inter text-navy/40 text-xs">Showreel coming soon</p>
-            </div>
-          )}
+          <div className="relative mx-auto bg-black overflow-hidden" style={{ maxWidth: '240px', aspectRatio: '9/16' }}>
+            {videoReady ? (
+              <video
+                ref={videoRef}
+                src={SHOWREEL_URL}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center bg-navy/20">
+                <Play size={28} className="text-signal-red/50 mb-2 animate-pulse" />
+                <span className="font-inter text-xs text-navy/40">Loading reel...</span>
+              </div>
+            )}
+          </div>
         </div>
         <PinnedPhotos photos={photos} onAdd={handlePhotoUpload} onRemove={url => setPhotos(p => p.filter(u => u !== url))} adminMode={adminMode} />
         <p className="font-inter text-navy/80 leading-relaxed mb-6 text-sm">
