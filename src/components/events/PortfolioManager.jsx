@@ -1,37 +1,22 @@
 import { useState } from 'react';
 import { Plus, X, Upload, Lock, ChevronLeft, FolderOpen, Images } from 'lucide-react';
-
 const ADMIN_PASSCODE = '2007';
-
 const placeholderAlbums = {
   weddings: [
     {
-      id: 'w1',
-      name: 'The Moloto\'s',
+      id: 'w4',
+      name: 'The Sebola\'s',
       date: '2024',
-      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623737/Moloto_Photo_Session_Main4_uxsuzp.webp',
+      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622973/IMG_8543_2_ds3jb1.webp',
       images: [
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623737/Moloto_Photo_Session_Main4_uxsuzp.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623737/Phago_Media_Moloto_9_zrrvpx.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623735/IMG_0957_obtkjh.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623737/Phago_Media_Moloto_22_efpenp.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623740/Moloto_Photo_Session_Main90_ecfmpj.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623739/Phago_Media_Moloto_1_Fotor_f0gevb.webp',
-      ],
-    },
-    {
-      id: 'w2',
-      name: 'Mishy & Moloko',
-      date: '2024',
-      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624783/Phago_Media_MM_317_h7oenh.webp',
-      images: [
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624783/Phago_Media_MM_317_h7oenh.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624786/Phago_Media_MM_175_zcsa8g.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624785/Phago_Media_MM_423_hbcwui.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778625020/Phago_Media_MM_358_ngufyl.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778625023/Phago_Media_MM_390_k8uvhu.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778625045/Phago_Media_MM_404_rlwbck.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624786/Phago_Media_MM_420_x0dwwv.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622973/IMG_8543_2_ds3jb1.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623084/IMG_8524_ekey8a.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622974/IMG_8558_huwdz7.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623078/IMG_8528_nzsmmm.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622976/IMG_8572_2_cjbl4t.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622970/IMG_8545_afppff.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622973/IMG_8537_gyu073.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622974/IMG_8529_xco27p.webp',
       ],
     },
     {
@@ -53,19 +38,32 @@ const placeholderAlbums = {
       ],
     },
     {
-      id: 'w4',
-      name: 'The Sebola\'s',
+      id: 'w2',
+      name: 'Mishy & Moloko',
       date: '2024',
-      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622973/IMG_8543_2_ds3jb1.webp',
+      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624783/Phago_Media_MM_317_h7oenh.webp',
       images: [
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622973/IMG_8543_2_ds3jb1.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623084/IMG_8524_ekey8a.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622974/IMG_8558_huwdz7.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623078/IMG_8528_nzsmmm.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622976/IMG_8572_2_cjbl4t.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622970/IMG_8545_afppff.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622973/IMG_8537_gyu073.webp',
-        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778622974/IMG_8529_xco27p.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624783/Phago_Media_MM_317_h7oenh.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624786/Phago_Media_MM_175_zcsa8g.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624785/Phago_Media_MM_423_hbcwui.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778625020/Phago_Media_MM_358_ngufyl.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778625023/Phago_Media_MM_390_k8uvhu.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778625045/Phago_Media_MM_404_rlwbck.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778624786/Phago_Media_MM_420_x0dwwv.webp',
+      ],
+    },
+    {
+      id: 'w1',
+      name: 'The Moloto\'s',
+      date: '2024',
+      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623737/Moloto_Photo_Session_Main4_uxsuzp.webp',
+      images: [
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623737/Moloto_Photo_Session_Main4_uxsuzp.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623737/Phago_Media_Moloto_9_zrrvpx.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623735/IMG_0957_obtkjh.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623737/Phago_Media_Moloto_22_efpenp.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623740/Moloto_Photo_Session_Main90_ecfmpj.webp',
+        'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623739/Phago_Media_Moloto_1_Fotor_f0gevb.webp',
       ],
     },
   ],
@@ -140,17 +138,14 @@ const placeholderAlbums = {
     },
   ],
 };
-
 function PasscodeModal({ onSuccess, onClose }) {
   const [passcode, setPasscode] = useState('');
   const [error, setError] = useState(false);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (passcode === ADMIN_PASSCODE) { onSuccess(); }
     else { setError(true); setPasscode(''); }
   };
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-navy/60 backdrop-blur-sm" onClick={onClose}>
       <form onSubmit={handleSubmit} onClick={e => e.stopPropagation()} className="bg-white p-8 w-80 shadow-2xl">
@@ -176,7 +171,6 @@ function PasscodeModal({ onSuccess, onClose }) {
     </div>
   );
 }
-
 export default function PortfolioManager({ eventType }) {
   const [albums, setAlbums] = useState(placeholderAlbums[eventType] || []);
   const [openAlbum, setOpenAlbum] = useState(null);
@@ -184,9 +178,7 @@ export default function PortfolioManager({ eventType }) {
   const [showPasscode, setShowPasscode] = useState(false);
   const [newAlbumName, setNewAlbumName] = useState('');
   const [creatingAlbum, setCreatingAlbum] = useState(false);
-
   const handleUnlock = () => { setAdminMode(true); setShowPasscode(false); };
-
   const createAlbum = () => {
     if (!newAlbumName.trim()) return;
     const album = {
@@ -201,9 +193,7 @@ export default function PortfolioManager({ eventType }) {
     setCreatingAlbum(false);
     setOpenAlbum(album.id);
   };
-
   const deleteAlbum = (id) => setAlbums(prev => prev.filter(a => a.id !== id));
-
   const uploadToAlbum = (e, albumId) => {
     const files = Array.from(e.target.files);
     files.forEach(file => {
@@ -214,7 +204,6 @@ export default function PortfolioManager({ eventType }) {
       }));
     });
   };
-
   const removeFromAlbum = (albumId, url) => {
     setAlbums(prev => prev.map(a => {
       if (a.id !== albumId) return a;
@@ -222,13 +211,10 @@ export default function PortfolioManager({ eventType }) {
       return { ...a, images, cover: images[0] || null };
     }));
   };
-
   const currentAlbum = albums.find(a => a.id === openAlbum);
-
   return (
     <div id="portfolio">
       {showPasscode && <PasscodeModal onSuccess={handleUnlock} onClose={() => setShowPasscode(false)} />}
-
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-4">
           <div className="w-8 h-px bg-signal-red" />
@@ -255,7 +241,6 @@ export default function PortfolioManager({ eventType }) {
           )}
         </div>
       </div>
-
       {!openAlbum && (
         <>
           {adminMode && (
@@ -279,14 +264,12 @@ export default function PortfolioManager({ eventType }) {
               )}
             </div>
           )}
-
           {albums.length === 0 && (
             <div className="text-center py-16 border border-dashed border-navy/10">
               <FolderOpen size={32} className="text-navy/20 mx-auto mb-3" />
               <p className="font-inter text-navy/40 text-sm">No albums yet. Unlock to create one.</p>
             </div>
           )}
-
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {albums.map(album => (
               <div key={album.id} className="group relative cursor-pointer" onClick={() => setOpenAlbum(album.id)}>
@@ -295,7 +278,9 @@ export default function PortfolioManager({ eventType }) {
                     ? <img src={album.cover} alt={album.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     : <div className="w-full h-full flex items-center justify-center"><Images size={32} className="text-navy/20" /></div>
                   }
-                  <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/40 transition-colors" />
+                  {/* Permanent dim overlay */}
+                  <div className="absolute inset-0 bg-navy/30" />
+                  <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <span className="font-grotesk font-semibold text-white text-sm tracking-wide">Open Album →</span>
                   </div>
@@ -308,16 +293,16 @@ export default function PortfolioManager({ eventType }) {
                     </button>
                   )}
                 </div>
+                {/* Date removed — name and photo count only */}
                 <div className="pt-2 pb-1">
                   <p className="font-grotesk font-semibold text-navy text-sm">{album.name}</p>
-                  <p className="font-inter text-navy/40 text-xs">{album.date} · {album.images.length} photos</p>
+                  <p className="font-inter text-navy/40 text-xs">{album.images.length} photos</p>
                 </div>
               </div>
             ))}
           </div>
         </>
       )}
-
       {openAlbum && currentAlbum && (
         <div>
           {adminMode && (
@@ -331,14 +316,12 @@ export default function PortfolioManager({ eventType }) {
               </label>
             </div>
           )}
-
           {currentAlbum.images.length === 0 && (
             <div className="text-center py-16 border border-dashed border-navy/10">
               <Images size={32} className="text-navy/20 mx-auto mb-3" />
               <p className="font-inter text-navy/40 text-sm">No photos in this album yet.</p>
             </div>
           )}
-
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {currentAlbum.images.map((url, i) => (
               <div key={i} className="relative group aspect-[4/3] overflow-hidden">
@@ -354,6 +337,13 @@ export default function PortfolioManager({ eventType }) {
                 )}
               </div>
             ))}
+          </div>
+          {/* Visit our page prompt */}
+          <div className="mt-10 text-center border-t border-navy/10 pt-8">
+            <p className="font-inter text-navy/50 text-sm">This is just a glimpse of our work.</p>
+            <p className="font-grotesk font-semibold text-navy text-base mt-1">
+              Visit our social pages to see more of what we do ↗
+            </p>
           </div>
         </div>
       )}
