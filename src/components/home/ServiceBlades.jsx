@@ -305,7 +305,12 @@ function SoundPanel({ onClose }) {
         </div>
         <div className="bg-tech-grey p-5">
           <p className="font-inter text-navy/70 text-sm mb-4 leading-relaxed">Interested in hiring our sound equipment or booking our engineers? Fill in our inquiry form.</p>
-          <a href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20enquire%20about%20sound%20engineering%20services." target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 py-4 bg-navy text-white font-grotesk font-semibold text-sm tracking-[0.1em] hover:bg-signal-red transition-colors duration-300">
+          <a
+            href="https://wa.me/270126430131?text=Hi%20Phago%20Media%2C%20I%20would%20like%20to%20get%20a%20quote."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 py-4 bg-navy text-white font-grotesk font-semibold text-sm tracking-[0.1em] hover:bg-signal-red transition-colors duration-300"
+          >
             <ExternalLink size={16} />
             SUBMIT INQUIRY FORM
           </a>
