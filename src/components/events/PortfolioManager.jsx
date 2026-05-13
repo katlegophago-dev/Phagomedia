@@ -91,7 +91,7 @@ const placeholderAlbums = {
       id: 'm2',
       name: 'Malimela\'s Day',
       date: '2024',
-      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623713/IMG_6902_2-2_succzj.webp',
+      cover: 'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623711/IMG_5896_2_ed4myi.webp',
       images: [
         'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623713/IMG_6902_2-2_succzj.webp',
         'https://res.cloudinary.com/djpngdzyj/image/upload/v1778623712/IMG_6887-2_tvukoa.webp',
