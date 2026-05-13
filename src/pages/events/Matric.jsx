@@ -1,5 +1,4 @@
 import EventPageLayout from '../../components/events/EventPageLayout';
-
 const packages = [
   {
     tier: 'Starter', name: 'Essential', price: 'R1,800', highlight: false,
@@ -14,13 +13,12 @@ const packages = [
     features: ['Full Team Coverage', '300–500 Images', 'Full Event Film', 'Drone Shots Included'],
   },
 ];
-
 export default function Matric() {
   return (
     <EventPageLayout
       title="Matric Dance"
       subtitle="Your farewell moment, documented in style."
-      heroImage="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1600&q=80"
+      heroImage="https://res.cloudinary.com/djpngdzyj/image/upload/v1778662116/pexels-juan-rosario-660540473-29534665_seb4oz.jpg"
       packages={packages}
       pricingTitle="Matric Dance Packages"
       eventType="matric"
